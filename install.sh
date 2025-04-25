@@ -1,9 +1,17 @@
 #!/bin/bash
 set -e
 
+# Eliminar archivos de la versión anterior
+echo -e "\033[1;34m🔄 Eliminando versiones anteriores de SSHBOT...\033[0m"
+rm -f /usr/local/bin/sshbot /usr/local/bin/notify_telegram_login.sh
+rm -f /etc/motd
+sed -i '/notify_telegram_login.sh success/d' /etc/profile
+sed -i '/notify_telegram_login.sh failure/d' /etc/pam.d/sshd
+
+# Continuar con la instalación
 clear
 echo -e "\033[1;36m╔══════════════════════════════════════╗\033[0m"
-echo -e "\033[1;32m        🚀 BIENVENIDO A SSHBOT         \033[0m"
+echo -e "\033[1;32m        🚀 BIENVENIDO A SSHBOT v1.1     \033[0m"
 echo -e "\033[1;33m          by: GERARVPN ⚙️              \033[0m"
 echo -e "\033[1;36m╚══════════════════════════════════════╝\033[0m"
 echo -e "\033[1;34m🔧 Configura tu bot de Telegram para empezar...\033[0m"
@@ -90,7 +98,7 @@ grep -q "notify_telegram_login.sh success" /etc/profile || echo "/usr/local/bin/
 # Banner MOTD
 echo -e "\033[1;34m📢 Agregando mensaje de bienvenida...\033[0m"
 echo -e "\033[1;32m==============================================\033[0m" > /etc/motd
-echo -e "\033[1;36m             SSHBOT v1.0 - ACTIVADO           \033[0m" >> /etc/motd
+echo -e "\033[1;36m             SSHBOT v1.1 - ACTIVADO           \033[0m" >> /etc/motd
 echo -e "\033[1;33m           by: GERARVPN - Seguridad           \033[0m" >> /etc/motd
 echo -e "\033[1;32m==============================================\033[0m" >> /etc/motd
 echo -e "\033[1;34m Usa el comando \033[1;36msshbot\033[1;34m para abrir el menú 📲 \033[0m" >> /etc/motd
@@ -102,7 +110,7 @@ cat << 'EOF' > /usr/local/bin/sshbot
 
 function header() {
   echo -e "\033[1;35m╔════════════════════════════════════════════╗\033[0m"
-  echo -e "\033[1;36m             SSHBOT v1.0 - MENÚ             \033[0m"
+  echo -e "\033[1;36m             SSHBOT v1.1 - MENÚ             \033[0m"
   echo -e "\033[1;33m         Seguridad y estilo por GERARVPN     \033[0m"
   echo -e "\033[1;35m╚════════════════════════════════════════════╝\033[0m"
 }
@@ -112,7 +120,8 @@ function menu() {
   header
   echo -e "\033[1;32m[1] Cambiar TOKEN del bot\033[0m"
   echo -e "\033[1;32m[2] Cambiar ID de usuario\033[0m"
-  echo -e "\033[1;31m[3] Desinstalar SSHBOT\033[0m"
+  echo -e "\033[1;34m[3] Actualizar SSHBOT a la última versión\033[0m"
+  echo -e "\033[1;31m[4] Desinstalar SSHBOT\033[0m"
   echo -e "\033[1;37m[0] Salir\033[0m"
   echo ""
   read -p $'\033[1;34m👉 Elige una opción: \033[0m' op
@@ -150,6 +159,16 @@ function menu() {
         echo -e "\033[1;33m✋ Cancelado. SSHBOT sigue instalado.\033[0m"
       fi
       ;;
+    4)
+      read -p $'\033[1;33m🔄 ¿Deseas actualizar SSHBOT a la última versión? (s/n): \033[0m' confirm_update
+      if [[ "$confirm_update" =~ ^[sS]$ ]]; then
+        echo -e "\033[1;34m⬇️ Descargando e instalando la nueva versión...\033[0m"
+        bash <(curl -Ls https://raw.githubusercontent.com/gerarvpn/SSHBOT/main/sshbot_installer.sh)
+        exit 0
+      else
+        echo -e "\033[1;33m✋ Actualización cancelada.\033[0m"
+      fi
+      ;;
     0) exit 0 ;;
     *) echo -e "\033[1;31m❌ Opción inválida. Intenta de nuevo.\033[0m" ;;
   esac
@@ -166,4 +185,4 @@ chmod +x /usr/local/bin/sshbot
 echo ""
 echo -e "\033[1;32m✅ INSTALACIÓN COMPLETA\033[0m"
 echo -e "\033[1;34m📲 Usa el comando \033[1;36msshbot\033[1;34m para abrir el menú.\033[0m"
-echo -e "\033[1;32mGracias por usar SSHBOT v1.0 - by GERARVPN\033[0m"
+echo -e "\033[1;32mGracias por usar SSHBOT v1.1 - by GERARVPN\033[0m"
