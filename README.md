@@ -31,11 +31,11 @@ bash <(curl -Ls https://raw.githubusercontent.com/gerarvpn/SSHBOT/main/sshbot_in
 ```
 
 
-🧭 Menú interactivo
+## 🧭 Menú interactivo
 
 Después de instalar, usa el comando:
 
-```bash
+  ```bash
 sshbot
 ```
 
@@ -46,9 +46,12 @@ Ahí podrás:
 	•	Desinstalar completamente el sistema
 	•	Volver cuando quieras con estilo
 
-⸻
 
-✉️ Notificaciones por Telegram
+---
+
+
+## ✉️ Notificaciones por Telegram
+
 
 Cada acceso SSH (éxito o fallo) genera una alerta instantánea a tu Telegram, incluyendo:
 	•	Nombre del usuario
@@ -56,9 +59,11 @@ Cada acceso SSH (éxito o fallo) genera una alerta instantánea a tu Telegram, i
 	•	Ubicación geográfica aproximada (país, región y ciudad)
 	•	Fecha y hora exacta del evento
 
-⸻
 
-⚠️ Requisitos
+---
+
+
+## ⚠️ Requisitos
 
 Compatible con:
 	•	Debian 10 o superior
@@ -68,18 +73,22 @@ Necesitas tener:
 	•	Un bot de Telegram creado (usa @BotFather)
 	•	Tu ID de usuario de Telegram (puedes obtenerlo con @userinfobot)
 
-⸻
 
-🤝 Contacto y soporte
+---
+
+
+## 🤝 Contacto y soporte
 
 ¿Tienes preguntas, ideas o necesitas ayuda?
 
 Contáctame directamente en Telegram:
 @GERARVPN
 
-⸻
 
-© Créditos
+---
+
+
+## © Créditos
 
 Desarrollado con pasión por GERARVPN
 Este proyecto es gratuito y de código abierto.
