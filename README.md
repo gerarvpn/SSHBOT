@@ -29,4 +29,59 @@ Copia y pega este comando en tu VPS (Debian/Ubuntu):
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/gerarvpn/SSHBOT/main/sshbot_installer.sh)
 ```
-nnnmnn
+
+
+🧭 Menú interactivo
+
+Después de instalar, usa el comando:
+
+```bash
+sshbot
+```
+
+Ahí podrás:
+	•	Cambiar el TOKEN del bot de Telegram
+	•	Cambiar tu ID de usuario
+	•	Actualizar SSHBOT a la última versión
+	•	Desinstalar completamente el sistema
+	•	Volver cuando quieras con estilo
+
+⸻
+
+✉️ Notificaciones por Telegram
+
+Cada acceso SSH (éxito o fallo) genera una alerta instantánea a tu Telegram, incluyendo:
+	•	Nombre del usuario
+	•	Dirección IP
+	•	Ubicación geográfica aproximada (país, región y ciudad)
+	•	Fecha y hora exacta del evento
+
+⸻
+
+⚠️ Requisitos
+
+Compatible con:
+	•	Debian 10 o superior
+	•	Ubuntu 18.04 o superior
+
+Necesitas tener:
+	•	Un bot de Telegram creado (usa @BotFather)
+	•	Tu ID de usuario de Telegram (puedes obtenerlo con @userinfobot)
+
+⸻
+
+🤝 Contacto y soporte
+
+¿Tienes preguntas, ideas o necesitas ayuda?
+
+Contáctame directamente en Telegram:
+@GERARVPN
+
+⸻
+
+© Créditos
+
+Desarrollado con pasión por GERARVPN
+Este proyecto es gratuito y de código abierto.
+¡Gracias por apoyar el software libre con estilo!
+
