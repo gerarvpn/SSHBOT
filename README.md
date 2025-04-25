@@ -1,5 +1,5 @@
 <h1 align="center">
-  🚀 SSHBOT v1.0 - Seguridad con estilo
+  🚀 SSHBOT v1.1 - Seguridad con estilo
 </h1>
 
 <p align="center">
@@ -13,9 +13,10 @@
 
 **SSHBOT** es un script avanzado que:
 - Envía notificaciones por Telegram ante accesos SSH exitosos o fallidos.
-- Incluye ubicación geográfica de la IP conectada.
+- Incluye la ubicación geográfica de la IP conectada.
 - Integra un menú interactivo para gestionar el bot.
 - Personaliza el mensaje de bienvenida (MOTD).
+- Permite actualizar SSHBOT a la última versión directamente desde el script.
 - Todo en un solo archivo: instalación rápida, estilo visual y comandos sencillos.
 
 ---
@@ -26,3 +27,4 @@ Copia y pega este comando en tu VPS (Debian/Ubuntu):
 
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/gerarvpn/SSHBOT/main/sshbot_installer.sh)
+
