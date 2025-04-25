@@ -28,4 +28,5 @@ Copia y pega este comando en tu VPS (Debian/Ubuntu):
 
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/gerarvpn/SSHBOT/main/sshbot_installer.sh)
-
+```
+nnnmnn
