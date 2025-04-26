@@ -120,8 +120,8 @@ function menu() {
   header
   echo -e "\033[1;32m[1] Cambiar TOKEN del bot\033[0m"
   echo -e "\033[1;32m[2] Cambiar ID de usuario\033[0m"
-  echo -e "\033[1;34m[3] Actualizar SSHBOT a la última versión\033[0m"
-  echo -e "\033[1;31m[4] Desinstalar SSHBOT\033[0m"
+  echo -e "\033[1;34m[4] Actualizar SSHBOT a la última versión\033[0m"
+  echo -e "\033[1;31m[3] Desinstalar SSHBOT\033[0m"
   echo -e "\033[1;37m[0] Salir\033[0m"
   echo ""
   read -p $'\033[1;34m👉 Elige una opción: \033[0m' op
