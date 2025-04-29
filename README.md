@@ -1,5 +1,5 @@
 <h1 align="center">
-  🚀 SSHBOT v1.1 - Seguridad con estilo
+  🚀 SSHBOT v1.2 - Seguridad con estilo
 </h1>
 
 <p align="center">
