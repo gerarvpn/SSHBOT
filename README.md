@@ -94,3 +94,4 @@ Desarrollado con pasión por GERARVPN
 Este proyecto es gratuito y de código abierto.
 ¡Gracias por apoyar el software libre con estilo!
 
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
